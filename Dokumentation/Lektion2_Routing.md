@@ -48,9 +48,18 @@ angular.module('app', ['ngRoute'])
     });
 ```
 
+## Direktiven
+
+Direktiven sind Marker im HTML, welche dem HTML compiler (`$compile`) von AngularJS Instruktionen geben. Es wird dadurch eine sehr deklarative Beschreibung der Applikation möglich.
+
+
+
+
+
 ## Aufgabe
 
-1. Erstelle eine Detailansicht für den Kundenmanager.
+1. Erstelle eine Detailansicht für den Kundenmanager mittels Routing.
+2. Vereinfache deinen Code mittels einer Direktive!
 
 <hr>
 

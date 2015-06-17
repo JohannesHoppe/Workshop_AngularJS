@@ -1,3 +1,5 @@
+![Logo](Dokumentation/Images/DeveloperWeek2015.jpg)
+
 # Einstieg in AngularJS
 
 * [DWX: 18.06.2015 09:00-17:00 Uhr][1]
@@ -28,13 +30,31 @@ Es werden unter anderem folgende Themen behandelt:
 
 <hr>
 
+## Rest API
+
 Während des Workshops können wir Daten von folgenden REST-APIs beziehen:
-#http://workshop-angularjs.azurewebsites.net/
+### http://workshop-angularjs.azurewebsites.net/
 
 ODER
 
-#http://ex.extjs-kochbuch.de/help
+### http://ex.extjs-kochbuch.de/help
 
 
+<hr>
+
+##Mini-Webserver:
+
+Im Verzeichnis "_START_" befindet sich ein Express-Webserver für die Entwicklung.
+
+Installation:
+
+```
+cd _START_
+node -v
+npm install
+npm start
+```
+
+<hr>
 
 &copy; 2015, Johannes Hoppe

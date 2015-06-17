@@ -35,7 +35,7 @@ namespace AngularDemo
 
             // RESET ON START
             var controller = new ResetController();
-            controller.Get();
+            controller.Reset();
         }
 
         public static void WriteMetadata(string path)

@@ -27,6 +27,12 @@ namespace AngularDemo.Controllers
         /// <returns>200 and a text</returns>
         public HttpResponseMessage Get()
         {
+            Reset();
+            return Request.CreateResponse(HttpStatusCode.OK, "Demo Data was resetted!");
+        }
+
+        public void Reset()
+        {
             var DemoData = GenerateDemoCustomers();
 
             db.Customers.Clear();
@@ -49,9 +55,6 @@ namespace AngularDemo.Controllers
                     customer.Invoices.Add(invoice);
                 }
             }
-            
-
-            return Request.CreateResponse(HttpStatusCode.OK, "Demo Data was resetted!");
         }
 
         private static IEnumerable<Customer> GenerateDemoCustomers()

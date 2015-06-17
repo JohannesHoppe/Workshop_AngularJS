@@ -1,0 +1,13 @@
+{
+  "name": "MiniServer",
+  "version": "0.0.1",
+  "author": "Johannes",
+  "description": "A demo AngularJS app",
+  "scripts": {
+    "start": "node _server.js"
+  },
+  "dependencies": {
+    "express": "~3.4.0"
+  },
+  "license": "MIT"
+}

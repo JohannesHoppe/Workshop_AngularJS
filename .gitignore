@@ -1,10 +1,14 @@
 [Bb]in/
 [Oo]bj/
 packages/
-node_modules/
 *.user
 *.suo
 _Resharper*
 Thumbs.db
 .sass-cache
-*.ncrunch*
+debug.log
+node_modules
+#bower_components
+npm-debug.log
+.ntvs_analysis.dat
+*/log/*.log
