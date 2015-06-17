@@ -17,14 +17,14 @@ Es werden unter anderem folgende Themen behandelt:
 
 <hr>
 
-### [Lektion 1 - HelloWorld mit Modulen](Lektion1_HelloWorld.md)
+### [Lektion 1 - HelloWorld mit Modulen](Dokumentation/Lektion1_HelloWorld.md)
 
-### [Lektion 2 - Routing](Lektion2_Routing.md)
+### [Lektion 2 - Routing](Dokumentation/Lektion2_Routing.md)
 
-### [Lektion 3 - HelloWorld mit Modulen](Lektion3_DatenLaden.md)
+### [Lektion 3 - Daten Laden und schick darstellen](Dokumentation/Lektion3_DatenLaden.md)
 
 ### Lektion 4... ihr entscheidet!
-(z.B. Unit Testing)
+(z.B. Unit Testing mit Jasmine/Karma oder JavaScript-Dateien per Bower?)
 
 <hr>
 
