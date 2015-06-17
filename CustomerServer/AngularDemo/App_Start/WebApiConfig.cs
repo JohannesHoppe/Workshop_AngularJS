@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.OData.Batch;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Extensions;
@@ -35,6 +36,9 @@ namespace AngularDemo
             // OData with fixed metadata
             // see: http://www.getbreezenow.com/documentation/odata-server
             config.Routes.MapODataServiceRoute("odataFixed", "odataFixed", EdmBuilder.GetEdm<DataContext>(), new DefaultODataBatchHandler(GlobalConfiguration.DefaultServer));
+
+            var cors = new EnableCorsAttribute("*", "*", "*", "DataServiceVersion, MaxDataServiceVersion") { SupportsCredentials = true };
+            config.EnableCors(cors);
         }
     }
 }

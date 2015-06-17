@@ -1,5 +1,6 @@
 ﻿requirejs.config({
-    baseUrl: '/Scripts',
+    baseUrl: '/Scripts/',
+    waitSeconds: 0,
     paths: {
         'jquery': 'jquery-2.1.1',
         'kendo': 'kendo/kendo.all.min',
