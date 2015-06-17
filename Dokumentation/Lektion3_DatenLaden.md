@@ -201,3 +201,7 @@ new breeze.EntityQuery()
 [3] Kendo UI - http://www.telerik.com/kendo-ui1  
 [4] Breeze.js - http://www.breezejs.com/  
 [5] Data.js - http://datajs.codeplex.com/  
+
+<hr>
+
+&copy; 2015, Johannes Hoppe

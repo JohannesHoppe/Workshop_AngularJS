@@ -169,3 +169,7 @@ Ungelöst ist immer noch das Bootstrapping, welches nicht mehr über `ng-app` re
 [3] Curls.js: https://github.com/cujojs/curl  
 [4] ngRepeat: https://docs.angularjs.org/api/ng/directive/ngRepeat
 [5] ngClick: https://docs.angularjs.org/api/ng/directive/ngClick
+
+<hr>
+
+&copy; 2015, Johannes Hoppe
