@@ -19,6 +19,8 @@ namespace AngularDemo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
             IocConfig.Register();
 
             var formatters = GlobalConfiguration.Configuration.Formatters;
@@ -28,7 +30,7 @@ namespace AngularDemo
             jsonFormatter.SerializerSettings.Formatting = Formatting.Indented;
             jsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; 
 
-            //WriteMetadata(Server.MapPath("~/Scripts/app/entityMetadata.js"));
+            WriteMetadata(Server.MapPath("~/Scripts/app/entityMetadata.js"));
         }
 
         public static void WriteMetadata(string path)

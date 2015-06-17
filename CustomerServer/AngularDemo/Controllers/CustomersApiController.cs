@@ -14,19 +14,24 @@ namespace AngularDemo.Controllers
 {
     public class CustomersApiController : ApiController
     {
-        private DataContext db = new DataContext();
+        private CustomerList db;
+
+        public CustomersApiController()
+        {
+            db = new CustomerList();
+        }
 
         // GET: api/CustomersApi
         public IQueryable<Customer> GetCustomers()
         {
-            return db.Customers;
+            return db.Customers.AsQueryable();
         }
 
         // GET: api/CustomersApi/5
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
-            Customer customer = db.Customers.Find(id);
+            Customer customer = db.Customers.First(c => c.Id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -49,23 +54,10 @@ namespace AngularDemo.Controllers
                 return BadRequest();
             }
 
-            db.Entry(customer).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CustomerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            Customer customerOld = db.Customers.First(c => c.Id == id);
+            customerOld.FirstName = customer.FirstName;
+            customerOld.LastName = customer.LastName;
+            customerOld.Mail = customer.Mail;
 
             return StatusCode(HttpStatusCode.NoContent);
         }
@@ -89,7 +81,7 @@ namespace AngularDemo.Controllers
         [ResponseType(typeof(Customer))]
         public IHttpActionResult DeleteCustomer(int id)
         {
-            Customer customer = db.Customers.Find(id);
+            Customer customer = db.Customers.First(c => c.Id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -99,20 +91,6 @@ namespace AngularDemo.Controllers
             db.SaveChanges();
 
             return Ok(customer);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool CustomerExists(int id)
-        {
-            return db.Customers.Count(e => e.Id == id) > 0;
         }
     }
 }

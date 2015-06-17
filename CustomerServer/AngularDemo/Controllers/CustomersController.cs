@@ -19,13 +19,18 @@ namespace AngularDemo.Controllers
     /// </summary>
     public class CustomersController : ODataController
     {
-        private DataContext db = new DataContext();
+        private CustomerList db;
+
+        public CustomersController()
+        {
+            db = new CustomerList();
+        }
 
         // GET: odata/Customers
         [EnableQuery]
         public IQueryable<Customer> GetCustomers()
         {
-            return db.Customers;
+            return db.Customers.AsQueryable();
         }
 
         [HttpPost]
@@ -48,7 +53,8 @@ namespace AngularDemo.Controllers
         [EnableQuery]
         public SingleResult<Customer> GetCustomer([FromODataUri] int key)
         {
-            return SingleResult.Create(db.Customers.Where(customer => customer.Id == key));
+            var x = db.Customers.Where(customer => customer.Id == key).AsQueryable();
+            return new SingleResult<Customer>(x);
         }
 
         // PUT: odata/Customers(5)
@@ -61,7 +67,7 @@ namespace AngularDemo.Controllers
                 return BadRequest(ModelState);
             }
 
-            Customer customer = db.Customers.Find(key);
+            Customer customer = db.Customers.First(c => c.Id == key);
             if (customer == null)
             {
                 return NotFound();
@@ -113,7 +119,7 @@ namespace AngularDemo.Controllers
                 return BadRequest(ModelState);
             }
 
-            Customer customer = db.Customers.Find(key);
+            Customer customer = db.Customers.First(c => c.Id == key);
             if (customer == null)
             {
                 return NotFound();
@@ -143,7 +149,7 @@ namespace AngularDemo.Controllers
         // DELETE: odata/Customers(5)
         public IHttpActionResult Delete([FromODataUri] int key)
         {
-            Customer customer = db.Customers.Find(key);
+            Customer customer = db.Customers.First(c => c.Id == key);
             if (customer == null)
             {
                 return NotFound();
@@ -159,16 +165,7 @@ namespace AngularDemo.Controllers
         [EnableQuery]
         public IQueryable<Invoice> GetInvoices([FromODataUri] int key)
         {
-            return db.Customers.Where(m => m.Id == key).SelectMany(m => m.Invoices);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            return db.Customers.First(m => m.Id == key).Invoices.AsQueryable();
         }
 
         private bool CustomerExists(int key)

@@ -1,7 +1,7 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 using System.Web.Http;
 using System.Web.Mvc;
-using AngularDemo.Models;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
@@ -19,9 +19,13 @@ namespace AngularDemo
 
             // Registers all Web API controllers
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-               
-            // All other types to register
-            builder.RegisterType<DataContext>().As<IDataContext>().InstancePerRequest();
+
+            // all types which are decorated with [RegisterInstancePerRequest]
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+                .Where(t => t.GetCustomAttributes(typeof(RegisterInstancePerRequestAttribute), false).Any())
+                .AsSelf()
+                .AsImplementedInterfaces()
+                .InstancePerRequest();
 
             var container = builder.Build();
 
