@@ -28,7 +28,7 @@ namespace AngularDemo
             jsonFormatter.SerializerSettings.Formatting = Formatting.Indented;
             jsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; 
 
-            WriteMetadata(Server.MapPath("~/Scripts/app/entityMetadata.js"));
+            //WriteMetadata(Server.MapPath("~/Scripts/app/entityMetadata.js"));
         }
 
         public static void WriteMetadata(string path)
