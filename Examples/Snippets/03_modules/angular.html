@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>NG AMD Example</title>   
+    <link href="../style.css" rel="stylesheet" />
+</head>
+
+<body class="example" ng-controller="exampleController">
+
+    <form class="form_example">
+        <label for="title">Title</label>
+        <input id="title" ng-model="model.title">
+        
+        <label for="message">Message</label>
+        <input id="message" ng-model="model.message">
+    </form> 
+ 
+    <sticky-note title="{{ model.title }}" message="{{ model.message }}"></sticky-note>
+
+    <script data-main="angular.init" src="../../js/require.js"></script>
+
+</body>
+</html>
