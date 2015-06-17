@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using AngularDemo.Models;
 using AutoPoco;
 using AutoPoco.DataSources;
@@ -12,6 +13,7 @@ using AutoPoco.Engine;
 
 namespace AngularDemo.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class ResetController : ApiController
     {
         private CustomerList db;

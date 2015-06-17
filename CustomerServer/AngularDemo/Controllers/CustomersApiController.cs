@@ -12,6 +12,7 @@ using AngularDemo.Models;
 
 namespace AngularDemo.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class CustomersApiController : ApiController
     {
         private CustomerList db;
