@@ -4,6 +4,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AngularDemo.Controllers;
 using AngularDemo.Models;
 using Breeze.ContextProvider.EF6;
 using Newtonsoft.Json;
@@ -31,6 +32,10 @@ namespace AngularDemo
             jsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; 
 
             //WriteMetadata(Server.MapPath("~/Scripts/app/entityMetadata.js"));
+
+            // RESET ON START
+            var controller = new ResetController();
+            controller.Get();
         }
 
         public static void WriteMetadata(string path)

@@ -21,7 +21,7 @@ namespace AngularDemo
                       "~/Content/kendo/kendo.dataviz.default.min.css"));
 
             // Set EnableOptimizations to false for debugging.
-            // BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

@@ -28,4 +28,13 @@ Es werden unter anderem folgende Themen behandelt:
 
 <hr>
 
+Während des Workshops können wir Daten von folgenden REST-APIs beziehen:
+#http://workshop-angularjs.azurewebsites.net/
+
+ODER
+
+#http://ex.extjs-kochbuch.de/help
+
+
+
 &copy; 2015, Johannes Hoppe
