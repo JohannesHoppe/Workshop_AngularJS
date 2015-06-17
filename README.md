@@ -11,11 +11,12 @@ Es werden unter anderem folgende Themen behandelt:
 - Controller, Services und Direktiven
 - Fehleranalyse und Debugging
 - Zusätzliche Frameworks wie Bootstrap und Kendo UI
-- Ausblick auf Angular 2.0
 
 
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18986
 
 <hr>
 
-Dokumentation
+### [Lektion 1 - HelloWorld mit Modulen](Lektion1_HelloWorld.md)
+
+### [Lektion 2 - HelloWorld mit Modulen](Lektion1_HelloWorld.md)
