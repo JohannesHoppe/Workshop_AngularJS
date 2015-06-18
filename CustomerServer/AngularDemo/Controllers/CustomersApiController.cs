@@ -7,12 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using AngularDemo.Models;
 
 namespace AngularDemo.Controllers
 {
-    [EnableCors("*", "*", "*")]
+    //[EnableCors("*", "*", "*")]
     public class CustomersApiController : ApiController
     {
         private CustomerList db;

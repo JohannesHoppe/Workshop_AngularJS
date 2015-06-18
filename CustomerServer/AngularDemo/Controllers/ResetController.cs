@@ -13,7 +13,7 @@ using AutoPoco.Engine;
 
 namespace AngularDemo.Controllers
 {
-    [EnableCors("*", "*", "*")]
+    //[EnableCors("*", "*", "*")]
     public class ResetController : ApiController
     {
         private CustomerList db;
