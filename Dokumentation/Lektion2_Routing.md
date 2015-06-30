@@ -1,3 +1,5 @@
+![Logo](Images/DeveloperWeek2015_klein.jpg)
+
 # Einstieg in AngularJS - Lektion 2: Routing
 
 ## Routing mit angular-route

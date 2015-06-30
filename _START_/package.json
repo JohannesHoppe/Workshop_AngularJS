@@ -4,10 +4,15 @@
   "author": "Johannes",
   "description": "A demo AngularJS app",
   "scripts": {
-    "start": "node _server.js"
+    "start": "node _server.js",
+    "test": "karma test"
   },
   "dependencies": {
     "express": "~3.4.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "^0.12.36",
+    "mocha": "^2.2.5"
+  }
 }

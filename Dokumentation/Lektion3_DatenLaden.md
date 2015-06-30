@@ -1,3 +1,5 @@
+![Logo](Images/DeveloperWeek2015_klein.jpg)
+
 # Einstieg in AngularJS - Lektion 3: Daten Laden und schick darstellen
 
 ## Die Geschäftslogik

@@ -1,3 +1,5 @@
+![Logo](Images/DeveloperWeek2015_klein.jpg)
+
 # Einstieg in AngularJS - Lektion 1: Hello World mit require.js
 
 ## Hello World

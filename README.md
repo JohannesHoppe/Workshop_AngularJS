@@ -25,7 +25,7 @@ Es werden unter anderem folgende Themen behandelt:
 
 ### [Lektion 3 - Daten Laden und schick darstellen](Dokumentation/Lektion3_DatenLaden.md)
 
-### Lektion 4... ihr entscheidet!
+### Lektion 4... Ihr entscheidet!
 (z.B. Unit Testing mit Jasmine/Karma oder JavaScript-Dateien per Bower?)
 
 <hr>
@@ -56,5 +56,8 @@ npm start
 ```
 
 <hr>
+
+**WICHTIG: Alle Quelltexte sowie dieses Dokument finden Sie unter:**
+### https://github.com/JohannesHoppe/Workshop_AngularJS
 
 &copy; 2015, Johannes Hoppe
